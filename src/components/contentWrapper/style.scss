@@ -1,0 +1,14 @@
+@import '../../mixins.scss';
+
+.contentWrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  @include max750 {
+    padding: 0 10px;
+  }
+}
+
+.contentWrapper:last-of-type {
+}

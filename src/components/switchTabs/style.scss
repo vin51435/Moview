@@ -1,0 +1,56 @@
+@import '../../mixins.scss';
+
+.switchingTabs {
+  height: 34px;
+  background-color: rgba(255, 255, 255, 0);
+  // background-color: white;
+  border-radius: 20px;
+  padding: 2px;
+  .tabItems {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    position: relative;
+    gap: 10px;
+    @include max750 {
+      gap: 5px;
+    }
+    .tabItem {
+      @include max750 {
+        width: 80px;
+      }
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      // color: var(--black);
+      font-size: 14px;
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+      color: var(--black-light);
+      border: 2px solid var(--black-light);
+      border-radius: 20px;
+      transition: color ease 0.3s, border ease 0.3s;
+      transition-delay: 0s;
+      &.active {
+        color: var(--orange);
+        border: 2px solid var(--orange);
+        transition: color ease 0.3s, border ease 0.3s;
+        transition-delay: 0s;
+      }
+    }
+    .movingBg {
+      height: 30px;
+      width: 100px;
+      border-radius: 15px;
+      background-color: rgba(0, 0, 0, 0);
+      // background-image: var(--gradient);
+      position: absolute;
+      left: 0;
+      transition: left cubic-bezier(0.88, -0.35, 0.565, 1.35) 0.4s;
+    }
+  }
+}
+

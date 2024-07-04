@@ -74,7 +74,7 @@ export const PosterBlockDetail = ({ activeData }) => {
         </div>
         <hr />
         <div className='categories'>
-          <p>Country: <span>{data?.origin_country}</span></p>
+          <p>Country: <span>{data?.origin_country ? data?.origin_country : '--'}</span></p>
           <p>Genres: <span><Genres2 data={data?.genre_ids} /></span></p>
           <p>Scores: <span>{data?.vote_average} by {data?.vote_count}</span></p>
         </div>
